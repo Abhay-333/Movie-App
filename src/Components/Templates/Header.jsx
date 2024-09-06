@@ -4,16 +4,23 @@ import { TbSpeakerphone } from "react-icons/tb";
 import { GrMultimedia } from "react-icons/gr";
 
 const Header = ({ data }) => {
-  console.log(data);
   const imagePath = data.backdrop_path || data.profile_path || data.poster_path;
+
+  const style = {
+    backgroundImage: `url(https://image.tmdb.org/t/p/original/${imagePath})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  };
   return (
     <div
-      style={{
-        background: `linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5), rgba(0,0,0,.7)), url(https://image.tmdb.org/t/p/original/${imagePath})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      //   style={{
+      //     `,
+      //     backgroundPosition: "center",
+      //     backgroundSize: "cover",
+      //     backgroundRepeat: "no-repeat",
+      //   }}
+      style={style}
       className="w-full h-[50vh] text-sm"
     >
       <div className="MovieDetails w-[60%] flex flex-col items-start justify-end px-[4%] py-[4%]">
@@ -36,17 +43,16 @@ const Header = ({ data }) => {
 
           <GrMultimedia className="ml-4" />
           <p className="uppercase">{data.media_type}</p>
-
-
         </div>
-          <div className="ratings mt-2">
+        <div className="ratings mt-2">
           <p>Ratings: {data.vote_average}</p>
-          </div>
+        </div>
 
-          <Link className="mt-3">
-            <button className="bg-[#7F40D1] py-4 rounded-lg px-5 font-semibold">Watch Trailer</button>
-          </Link>
-
+        <Link className="mt-3">
+          <button className="bg-[#7F40D1] py-4 rounded-lg px-5 font-semibold">
+            Watch Trailer
+          </button>
+        </Link>
       </div>
     </div>
   );

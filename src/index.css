@@ -11,3 +11,16 @@
     background-color: rgb(58, 57, 57);
     border-radius: 10px;
 }
+
+/* card w-[20%] h-full border-[1px] border-gray-400 flex-shrink-0 rounded-lg flex items-end justify-center */
+
+/* .card{
+    width:20%;
+    height: 100%;
+    border: 1px solid gray;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display:flex;
+    align-items: end;
+    justify-content: center;
+} */
