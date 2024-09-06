@@ -13,7 +13,6 @@ const TopNav = () => {
   const fetchSearchingData = async () => {
     try {
       const data = await Axios.get(`/search/multi?query=${query}`);
-      console.log(data.data.results);
       setSearches(data.data.results);
     } catch (error) {
       console.log(error);
@@ -39,7 +38,7 @@ const TopNav = () => {
           <IoMdClose onClick={() => setQuery("")} className="text-2xl" />
         )}
 
-        <div className="absolute max-h-[50vh] w-[60%] top-[100%] overflow-auto rounded-lg">
+        <div className="absolute max-h-[50vh] w-[60%] top-[100%] left-[23%] overflow-auto ">
           {searches.map((search, index) => (
             <Link className="hover:bg-zinc-300 duration-300 hover:text-[#5043ff] text-black font-semibold bg-zinc-100 p-8 flex items-center justify-start border-b-[gray] gap-4 border-b-[1px]">
               <img
