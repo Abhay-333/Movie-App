@@ -2,14 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar{
-    height: 7px;
-    width: 7px;
+@font-face {
+  font-family: Gugi;
+  src: url(./Resources/Gugi/Gugi.ttf);
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: rgb(58, 57, 57);
-    border-radius: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.font-Gugi{
+  font-family: Gugi;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(58, 57, 57);
+  border-radius: 10px;
 }
 
 /* card w-[20%] h-full border-[1px] border-gray-400 flex-shrink-0 rounded-lg flex items-end justify-center */

@@ -4,10 +4,10 @@ import { TbSpeakerphone } from "react-icons/tb";
 import { GrMultimedia } from "react-icons/gr";
 
 const Header = ({ data }) => {
-  const imagePath = data.backdrop_path || data.profile_path || data.poster_path;
+  const imagePath = data.poster_path || data.backdrop_path || data.profile_path;
 
   const style = {
-    backgroundImage: `url(https://image.tmdb.org/t/p/original/${imagePath})`,
+    background: `linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5), rgba(0,0,0,.7)), url(https://image.tmdb.org/t/p/original/${imagePath})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -49,7 +49,7 @@ const Header = ({ data }) => {
         </div>
 
         <Link className="mt-3">
-          <button className="bg-[#7F40D1] py-4 rounded-lg px-5 font-semibold">
+          <button className="bg-[#7F40D1] py-4 rounded-lg px-5 font-medium">
             Watch Trailer
           </button>
         </Link>

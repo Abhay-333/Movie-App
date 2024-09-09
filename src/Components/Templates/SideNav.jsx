@@ -18,7 +18,7 @@ const SideNav = () => {
       <h2 className="text-lg mt-5 mb-3 ml-5">New Feeds</h2>
 
       <nav className="flex flex-col gap-3">
-        <Link className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
+        <Link to="/trending" className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
           <IoMdTrendingUp className="text-xl" />
           Trending
         </Link>

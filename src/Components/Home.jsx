@@ -28,7 +28,6 @@ const Home = () => {
   const getTrending = async () => {
     try {
       const data = await Axios.get(`/trending/${category}/day`);
-      console.log(data.data.results);
       setTrending(data.data.results);
     } catch (error) {
       console.log(error);
@@ -53,7 +52,7 @@ const Home = () => {
           <DropDown
             title="Filter"
             options={["tv", "movie", "all"]}
-            trendingFunc={(e) => setCategory(e.target.value)}
+            Func={(e) => setCategory(e.target.value)}
           />
         </div>
 
