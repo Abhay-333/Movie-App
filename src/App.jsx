@@ -2,6 +2,10 @@ import './style.css'
 import { Routes,Route } from 'react-router-dom'
 import Home from './Components/Home'
 import Trending from './Components/Trending'
+import Popular from './Components/Popular'
+import Movies from './Components/Movies'
+import TvShows from './Components/TvShows'
+import People from './Components/People'
 
 function App() {
 
@@ -10,6 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/trending" element={<Trending/>}></Route>
+        <Route path="/popular" element={<Popular/>}></Route>
+        <Route path="/movies" element={<Movies/>}></Route>
+        <Route path="/tvshows" element={<TvShows/>}></Route>
+        <Route path="/people" element={<People/>}></Route>
       </Routes>
     </div>
   )

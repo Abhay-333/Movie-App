@@ -23,20 +23,21 @@ const SideNav = () => {
           Trending
         </Link>
 
-        <Link className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
+        <Link to="/popular" className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
           <IoIosPeople  className="text-xl" />
           Popular
         </Link>
 
-        <Link className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
+        <Link to="/movies" className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
           <MdLocalMovies className="text-xl"/>
           Movies
         </Link>
-        <Link className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
+
+        <Link to="/tvshows" className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
           <IoTv  className="text-xl"/>
           TV Shows
         </Link>
-        <Link className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
+        <Link to="/people" className="p-4 hover:bg-[#7f40d1] text-sm rounded-lg duration-200 flex items-center gap-2">
           <MdPeople className="text-xl" />
           People
         </Link>
