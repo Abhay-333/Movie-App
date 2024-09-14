@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HorizontalCards = ({ data}) => {
-  
-    return (
+const HorizontalCards = ({ data }) => {
+  return (
     <div className="min-h-[40vh] w-full px-5 py-3 overflow-y-auto">
-
       <div className="cards h-[20rem] w-full gap-5 flex">
         {data.map((card, index) => (
-          <div
+          <Link
+            to={`${card.media_type}/details/${card.id}`}
             key={index}
             style={{
               background: `linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5), rgba(0,0,0,.7)), url(https://image.tmdb.org/t/p/original/${
@@ -33,7 +32,7 @@ const HorizontalCards = ({ data}) => {
                 <Link className="text-blue-400 font-semibold ">...more</Link>
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

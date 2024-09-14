@@ -48,7 +48,7 @@ const Header = ({ data }) => {
           <p>Ratings: {data.vote_average}</p>
         </div>
 
-        <Link className="mt-3">
+        <Link className="mt-3" to={`${data.media_type}/details/${data.id}`}>
           <button className="bg-[#7F40D1] py-4 rounded-lg px-5 font-medium">
             Watch Trailer
           </button>
