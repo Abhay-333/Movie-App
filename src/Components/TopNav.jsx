@@ -6,6 +6,7 @@ import { useState } from "react";
 import Axios from "../Utils/Axios";
 import noImg from '../Resources/no-img.WEBP'
 
+
 const TopNav = () => {
   const [query, setQuery] = useState("");
   const [searches, setSearches] = useState([]);
@@ -40,7 +41,7 @@ const TopNav = () => {
 
         <div className="absolute z-[100] max-h-[50vh] w-[60%] top-[100%] left-[23%] overflow-auto ">
           {searches.map((search, index) => (
-            <Link className="hover:bg-zinc-300 duration-300 hover:text-[#5043ff] text-black font-semibold bg-zinc-100 p-8 flex items-center justify-start border-b-[gray] gap-4 border-b-[1px]">
+            <Link key={index} to={`/${search.media_type}/details/${search.id}`}className="hover:bg-zinc-300 duration-300 hover:text-[#5043ff] text-black font-semibold bg-zinc-100 p-8 flex items-center justify-start border-b-[gray] gap-4 border-b-[1px]">
               <img
               className="w-[13vw] rounded-lg object-cover object-center"
                 src={search.backdrop_path || search.profile_path || search.poster_path ? `https://image.tmdb.org/t/p/original/${search.backdrop_path || search.profile_path || search.poster_path}`: noImg}
