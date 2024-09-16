@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Axios from "../Utils/Axios";
-import noImg from '../Resources/no-img.WEBP'
+import noImg from '../Resources/no-img.webp'
 
 
 const TopNav = () => {
