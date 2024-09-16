@@ -22,9 +22,8 @@ const MovieDetails = () => {
     return () => {
       dispatch(removeMovie());
     };
-  }, [pathname]);
+  }, [id]);
 
-  console.log(pathname,info);
   return info ? (
     <div
       style={{

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Cards = ({ data, title }) => {
-  console.log(title)
   return (
     <div className="w-full flex bg-[#1D1C23] items-center gap-8 flex-wrap justify-center">
       {data.map((card, index) => {
