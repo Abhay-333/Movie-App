@@ -8,8 +8,8 @@ import TvShows from "./Components/TvShows";
 import People from "./Components/People";
 import TvDetails from "./Components/TvDetails";
 import PeopleDetails from "./Components/PeopleDetails";
-import MovieDetails from './Components/MovieDetails'
-import  Trailer from './Components/Templates/Trailer'
+import MovieDetails from "./Components/MovieDetails";
+import Trailer from "./Components/Templates/Trailer";
 import NotFound from "./Components/Templates/NotFound";
 
 function App() {
@@ -21,24 +21,21 @@ function App() {
         <Route path="/popular" element={<Popular />}></Route>
 
         <Route path="/movies" element={<Movies />}></Route>
-        <Route
-          path="/movie/details/:id"
-          element={<MovieDetails />}
-        >
-          <Route path="/movie/details/:id/trailer" element={<Trailer/>}></Route>
+        <Route path="/movie/details/:id" element={<MovieDetails />}>
+          <Route
+            path="trailer"
+            element={<Trailer />} 
+          ></Route>
         </Route>
 
-    
         <Route path="/tvshows" element={<TvShows />}></Route>
-        <Route path="/tv/details/:id" element={<TvDetails />}></Route>
+        <Route path="/tv/details/:id" element={<TvDetails />}>
+        
+        </Route>
 
         <Route path="/people" element={<People />}></Route>
-        <Route
-          path="/people/details/:id"
-          element={<PeopleDetails />}
-        ></Route>
+        <Route path="/people/details/:id" element={<PeopleDetails />}></Route>
         <Route path="*" element={<NotFound />}></Route>
-        
       </Routes>
     </div>
   );

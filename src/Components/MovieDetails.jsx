@@ -22,9 +22,9 @@ const MovieDetails = () => {
     return () => {
       dispatch(removeMovie());
     };
-  }, []);
+  }, [pathname]);
 
-  console.log(info);
+  console.log(pathname,info);
   return info ? (
     <div
       style={{
@@ -187,7 +187,7 @@ const MovieDetails = () => {
               {info.translations.join(", ")}
             </div> */}
 
-            <Link to={`${pathname}trailer`}>
+            <Link to={`${pathname}/trailer`}>
               <button className="bg-[#7F40D1] mt-6 py-4 rounded-lg px-5 font-medium flex items-center gap-2">
                 <FaPlay className="text-[0.8vw]" />
                 Watch Trailer

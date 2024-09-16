@@ -11,7 +11,7 @@ const Trailer = () => {
   const ytVideo = useSelector((state) => state[videoCategory].info.videos);
 
   return (
-    <div className="absolute top-0 left-0 bg-[rgba(0,0,0,0.89)] h-screen w-full flex items-center justify-center">
+    <div className="fixed top-0 left-0 bg-[rgba(0,0,0,0.89)] h-screen w-full flex items-center justify-center">
       <IoMdClose
         onClick={() => navigate(-1)}
         className="absolute z-[10000] cursor-pointer text-2xl top-[5%] right-[3%]"

@@ -7,7 +7,7 @@ const HorizontalCards = ({ data }) => {
       <div className="cards h-[20rem] w-full gap-5 flex">
         {data.map((card, index) => (
           <Link
-            to={`${card.media_type}/details/${card.id}`}
+            to={`/${card.media_type}/details/${card.id}`}
             key={index}
             style={{
               background: `linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5), rgba(0,0,0,.7)), url(https://image.tmdb.org/t/p/original/${
