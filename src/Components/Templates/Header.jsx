@@ -33,7 +33,7 @@ const Header = ({ data }) => {
 
         <p className="mt-3">
         {data.overview ? data.overview.slice(0, 150) : "No description available"}{" "}
-          <Link to={`${data.media_type}/details/${data.id}`} className="text-blue-400 font-semibold ">...more</Link>
+          <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400 font-semibold ">...more</Link>
         </p>
 
         <div className="annoucement flex items-center gap-2 mt-2">
