@@ -4,6 +4,9 @@ import { TbSpeakerphone } from "react-icons/tb";
 import { GrMultimedia } from "react-icons/gr";
 
 const Header = ({ data }) => {
+  if (!data) {
+    return <h1>Loading...</h1>;
+  }
   const imagePath = data.poster_path || data.backdrop_path || data.profile_path;
 
   const style = {
@@ -12,7 +15,7 @@ const Header = ({ data }) => {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   };
-  return data ? (
+  return (
     <div
       //   style={{
       //     `,
@@ -29,7 +32,7 @@ const Header = ({ data }) => {
         </h1>
 
         <p className="mt-3">
-          {data.overview.slice(0, 150)}{" "}
+        {data.overview ? data.overview.slice(0, 150) : "No description available"}{" "}
           <Link to={`${data.media_type}/details/${data.id}`} className="text-blue-400 font-semibold ">...more</Link>
         </p>
 
@@ -55,7 +58,7 @@ const Header = ({ data }) => {
         </Link>
       </div>
     </div>
-  ) : <h1>Loading...</h1>;
+  );
 };
 
 export default Header;
