@@ -12,7 +12,7 @@ const Header = ({ data }) => {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   };
-  return (
+  return data ? (
     <div
       //   style={{
       //     `,
@@ -55,7 +55,7 @@ const Header = ({ data }) => {
         </Link>
       </div>
     </div>
-  );
+  ) : <h1>Loading...</h1>;
 };
 
 export default Header;
